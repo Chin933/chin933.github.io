@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#dfe6ec"/>
+  <rect x="0" y="430" width="800" height="170" fill="#c3cfd9"/>
+  <circle cx="650" cy="120" r="55" fill="#eef3f7"/>
+  <polygon points="120,430 280,250 420,430" fill="#aebccb"/>
+  <polygon points="330,430 520,210 720,430" fill="#9bb0c2"/>
+  <text x="400" y="320" font-family="sans-serif" font-size="34" fill="#5b6b7b" text-anchor="middle">Fieldwork photo 6</text>
+  <text x="400" y="360" font-family="sans-serif" font-size="20" fill="#7b8a99" text-anchor="middle">replace with your image</text>
+</svg>
