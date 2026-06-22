@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qinnan Zhou</title>
-  <meta name="description" content="Academic homepage of Qinnan Zhou, economist.">
+  <meta name="description" content="Qinnan Zhou — economist working in labor economics and political economy, Duke University.">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -12,80 +12,129 @@
   <!-- ============ NAVIGATION ============ -->
   <nav class="nav">
     <div class="nav-inner">
-      <a class="nav-brand" href="index.html">Qinnan Zhou</a>
+      <a class="nav-brand" href="#top">Qinnan Zhou</a>
       <button class="nav-toggle" aria-label="Menu">&#9776;</button>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="publications.html">Research</a></li>
-        <li><a href="fieldwork.html">Fieldwork</a></li>
-        <li><a href="data.html">Code &amp; Data</a></li>
-        <li><a href="cv.html">CV</a></li>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#software">Data &amp; Research Software</a></li>
+        <li><a href="#fieldwork">Field Works</a></li>
+        <li><a href="#research">Research</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="wrap">
+  <div class="page">
 
-    <!-- ============ PROFILE SIDEBAR ============ -->
-    <aside class="profile">
-      <img class="avatar" src="images/profile/avatar.svg" alt="Qinnan Zhou">
+    <!-- ============ 1. HERO ============ -->
+    <section id="top" class="hero">
       <h1>Qinnan Zhou</h1>
-      <p class="role">Ph.D. Candidate / Assistant Professor</p>
-      <p class="affil">Department of Economics<br>Duke University</p>
-      <ul class="social">
-        <li><span class="ico">&#9993;</span> <a href="mailto:qinnan.zhou@duke.edu">qinnan.zhou@duke.edu</a></li>
-        <li><span class="ico">&#128279;</span> <a href="cv.html">Curriculum Vitae</a></li>
-        <li><span class="ico">&#128221;</span> <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></li>
-        <li><span class="ico">&#128100;</span> <a href="#" target="_blank" rel="noopener">SSRN / RePEc</a></li>
-        <li><span class="ico">&#9925;</span> <a href="https://github.com/Chin933" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
-    </aside>
-
-    <!-- ============ MAIN CONTENT ============ -->
-    <main class="content">
-      <h2>About</h2>
-      <p>
-        I am an economist working in <strong>labor economics and political
-        economy</strong>. My research studies [the questions you care about —
-        a sentence or two on your main agenda].
+      <p class="affil">Ph.D. Candidate, Department of Economics, Duke University</p>
+      <p class="agenda">
+        I work in labor economics and political economy, studying how institutions
+        and historical context shape labor markets and economic development.
       </p>
-      <p>
-        I am currently a [position] at [Duke University]. Before that, I [previous
-        affiliation / degree]. My work has taken me into the field across
-        [regions / countries] — see the <a href="fieldwork.html">Fieldwork</a>
-        page for photos, and <a href="data.html">Code &amp; Data</a> for datasets and
-        replication materials.
-      </p>
+    </section>
 
-      <h3>Research interests</h3>
-      <ul class="tag-list">
-        <li>Labor economics</li>
-        <li>Political economy</li>
-      </ul>
+    <!-- ============ 2. DATA & RESEARCH SOFTWARE ============ -->
+    <section id="software" class="section">
+      <h2>Data &amp; Research Software</h2>
+      <div class="section-rule"></div>
 
-      <h2>News</h2>
-      <ul class="news">
-        <li><span class="date">Jun 2026</span><span>New working paper posted — see <a href="publications.html">Research</a>.</span></li>
-        <li><span class="date">Apr 2026</span><span>Completed field data collection in [location].</span></li>
-        <li><span class="date">Jan 2026</span><span>Presented at [conference / seminar].</span></li>
-      </ul>
+      <div class="repo-list">
 
-      <h2>Featured research</h2>
-      <div class="pub">
-        <div class="pub-title">Title of Your Job Market / Lead Paper</div>
-        <div class="pub-authors">Qinnan Zhou, Coauthor</div>
-        <div class="pub-venue">Working Paper, 2026</div>
-        <div class="pub-links">
-          <a href="#">PDF</a><a href="#">Abstract</a><a href="data.html">Data &amp; code</a>
+        <div class="repo">
+          <div class="repo-head">
+            <a class="repo-name" href="https://github.com/Chin933/citation-auditor-skill" target="_blank" rel="noopener">citation-auditor-skill</a>
+            <span class="repo-tags">Research tool · citations · verification</span>
+          </div>
+          <p class="repo-desc">
+            A citation verification tool that checks bibliographic existence, field
+            accuracy, and whether a source supports the cited claim.
+          </p>
+          <a class="repo-link" href="https://github.com/Chin933/citation-auditor-skill" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
+
+        <div class="repo">
+          <div class="repo-head">
+            <a class="repo-name" href="https://github.com/Chin933/temporal-did" target="_blank" rel="noopener">temporal-did</a>
+            <span class="repo-tags">Python toolkit · causal inference · historical DiD</span>
+          </div>
+          <p class="repo-desc">
+            A Python toolkit for historical difference-in-differences designs where the
+            policy shock occurs between observed data periods.
+          </p>
+          <a class="repo-link" href="https://github.com/Chin933/temporal-did" target="_blank" rel="noopener">GitHub &rarr;</a>
+        </div>
+
+        <div class="repo">
+          <div class="repo-head">
+            <a class="repo-name" href="https://github.com/Chin933/Chinese_Cultural_Variables" target="_blank" rel="noopener">Chinese Cultural Variables</a>
+            <span class="repo-tags">Dataset · China · historical political economy</span>
+          </div>
+          <p class="repo-desc">
+            County- and prefecture-level datasets on Chinese historical institutions,
+            including imperial examination degrees, clans, and Protestant missions.
+          </p>
+          <a class="repo-link" href="https://github.com/Chin933/Chinese_Cultural_Variables" target="_blank" rel="noopener">GitHub &rarr;</a>
+        </div>
+
       </div>
-    </main>
+
+      <p class="see-all">
+        <a href="https://github.com/Chin933" target="_blank" rel="noopener">See all repositories on GitHub &rarr;</a>
+      </p>
+    </section>
+
+    <!-- ============ 3. FIELD WORKS ============ -->
+    <section id="fieldwork" class="section">
+      <h2>Field Works</h2>
+      <div class="section-rule"></div>
+
+      <div class="gallery">
+        <figure>
+          <img src="images/fieldwork/sample-1.svg" alt="Fieldwork photo 1">
+          <figcaption>Caption — replace with your photo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fieldwork/sample-2.svg" alt="Fieldwork photo 2">
+          <figcaption>Caption — replace with your photo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fieldwork/sample-3.svg" alt="Fieldwork photo 3">
+          <figcaption>Caption — replace with your photo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fieldwork/sample-4.svg" alt="Fieldwork photo 4">
+          <figcaption>Caption — replace with your photo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fieldwork/sample-5.svg" alt="Fieldwork photo 5">
+          <figcaption>Caption — replace with your photo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fieldwork/sample-6.svg" alt="Fieldwork photo 6">
+          <figcaption>Caption — replace with your photo</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 4. RESEARCH ============ -->
+    <section id="research" class="section">
+      <h2>Research</h2>
+      <div class="section-rule"></div>
+      <p class="coming">Coming soon.</p>
+    </section>
+
   </div>
 
-  <footer class="footer">
-    &copy; 2026 Qinnan Zhou &middot; Built with GitHub Pages
-  </footer>
+  <!-- Lightbox overlay (Field Works) -->
+  <div class="lightbox">
+    <span class="close">&times;</span>
+    <img src="" alt="">
+    <div class="caption"></div>
+  </div>
 
+  <footer class="footer">&copy; 2026 Qinnan Zhou</footer>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

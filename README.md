@@ -1,50 +1,30 @@
 # chin933.github.io
 
-Personal academic website, served at **https://chin933.github.io**.
+Single-page academic homepage for **Qinnan Zhou**, served at
+**https://chin933.github.io**.
 
-Built as a plain static site (HTML + CSS + a little JS) — no build step, no
-framework. Anything you commit to this repo is published automatically by
-GitHub Pages.
+Plain static site (HTML + CSS + a little JS) — no build step. Anything committed
+to this repo is published automatically by GitHub Pages.
 
-## Enable the site (one-time)
+## Structure
 
-1. Push this repo to GitHub.
-2. Go to the repo on GitHub → **Settings → Pages**.
-3. Under "Build and deployment", set **Source = Deploy from a branch**,
-   **Branch = `main`** (or your default branch), folder **`/ (root)`**, Save.
-4. Wait ~1 minute, then open https://chin933.github.io
+Everything lives in `index.html`, organized into anchor sections:
+
+| Section | Anchor |
+|---------|--------|
+| Hero (name, affiliation, research agenda) | `#top` |
+| Data & Research Software (repository list) | `#software` |
+| Field Works (photo gallery) | `#fieldwork` |
+| Research | `#research` |
+
+- Styling: `assets/css/main.css` (edit colors/spacing at the top).
+- Gallery lightbox + mobile menu: `assets/js/main.js`.
 
 ## How to edit
 
-| What | File |
-|------|------|
-| Home / bio / news | `index.html` |
-| Research & publications | `publications.html` |
-| Fieldwork photo gallery | `fieldwork.html` |
-| Data & replication | `data.html` |
-| CV | `cv.html` |
-| Colors, fonts, layout | `assets/css/main.css` (top of file) |
-
-### Personalize
-
-Replace **"Your Name"**, **"Your University"**, and the `you@university.edu`
-email everywhere (a global find-and-replace works well). Update the social
-links in the sidebar of `index.html`.
-
-### Add your profile photo
-
-Save your photo as `images/profile/avatar.jpg`, then in `index.html` change
-`images/profile/avatar.svg` → `images/profile/avatar.jpg`.
-
-### Add fieldwork photos
-
-1. Drop image files into `images/fieldwork/`.
-2. In `fieldwork.html`, copy a `<figure>…</figure>` block per photo, pointing
-   `src` to your file and editing the caption.
-3. Tip: resize photos to ~1600px wide and compress (e.g. squoosh.app) so the
-   page loads fast.
-
-### Add data
-
-Small files go in `data/`; link to them from `data.html`. For large datasets,
-host externally and link instead.
+- **Hero / repos / research:** edit the matching `<section>` in `index.html`.
+- **Add a repository:** copy a `<div class="repo">…</div>` block in the
+  `#software` section (repo name, tags, one-sentence description, GitHub link).
+- **Add field photos:** drop image files into `images/fieldwork/`, then point a
+  `<figure>` block's `<img src>` at your file and edit the caption. Resize photos
+  to ~1600px wide and compress (e.g. squoosh.app) so the page loads fast.
