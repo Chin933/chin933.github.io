@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data &amp; Code — Qinnan Zhou</title>
+  <title>Code &amp; Data — Qinnan Zhou</title>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="publications.html">Research</a></li>
         <li><a href="fieldwork.html">Fieldwork</a></li>
-        <li><a href="data.html" class="active">Data</a></li>
+        <li><a href="data.html" class="active">Code &amp; Data</a></li>
         <li><a href="cv.html">CV</a></li>
       </ul>
     </div>
@@ -23,41 +23,75 @@
 
   <div class="wrap single">
     <main class="content">
-      <h2>Data &amp; Replication</h2>
+      <h2>Code &amp; Data</h2>
       <p>
-        Datasets and replication packages from my projects. Small files can live in
-        the <code>data/</code> folder of this site; for large datasets I link to a
-        dedicated repository (GitHub, Dataverse, OSF, or ICPSR).
+        Open-source datasets, econometric tools, and research software I build and
+        maintain. Everything below is public on
+        <a href="https://github.com/Chin933" target="_blank" rel="noopener">my GitHub</a>
+        &mdash; original data collection, causal-inference methods, and tooling for
+        rigorous empirical work.
       </p>
 
       <div class="cards">
+
+        <!-- ===== Dataset ===== -->
         <div class="card">
-          <h3>Field Survey Dataset, 2025</h3>
-          <p class="meta">Household survey &middot; [N] households &middot; [location]</p>
-          <p>De-identified household survey data collected during fieldwork, with codebook and questionnaire.</p>
-          <a class="btn" href="#">Download (.csv)</a>
-          <a class="btn ghost" href="#">Codebook</a>
+          <p class="meta">Dataset &middot; Empirical social science</p>
+          <h3>Chinese Cultural Variables</h3>
+          <p>
+            Prefecture- and county-level data on historical Chinese institutions for
+            empirical research: imperial examination degree-holders (Jinshi, Juren,
+            Shengyuan), clan genealogies and ancestral halls, 1936 Protestant
+            missionary presence, and surname concentration (HHI). Pairs deep
+            historical records with modern geographic precision, standardized
+            administrative coding, normalized metrics, and map visualizations.
+          </p>
+          <ul class="tag-list" style="margin:12px 0;">
+            <li>China</li><li>Historical data</li><li>Political economy</li><li>GIS / maps</li>
+          </ul>
+          <a class="btn" href="https://github.com/Chin933/Chinese_Cultural_Variables" target="_blank" rel="noopener">View on GitHub</a>
         </div>
 
+        <!-- ===== Method / software ===== -->
         <div class="card">
-          <h3>Replication: Job Market Paper</h3>
-          <p class="meta">Stata / R &middot; full pipeline</p>
-          <p>Code and processed data to reproduce all tables and figures in the paper.</p>
-          <a class="btn" href="https://github.com/Chin933" target="_blank" rel="noopener">GitHub repo</a>
+          <p class="meta">Method &middot; Python toolkit</p>
+          <h3>temporal-did</h3>
+          <p>
+            Difference-in-differences when the policy shock falls <em>between</em>
+            observed periods &mdash; a pervasive problem in historical data. The
+            toolkit diagnoses temporal mismatch, classifies settings into four cases
+            (stable, decaying, decayed effects), and jointly estimates decay rates
+            and treatment effects via weighted least squares, with partial-identification
+            bounds and Monte Carlo validation.
+          </p>
+          <ul class="tag-list" style="margin:12px 0;">
+            <li>Python</li><li>Causal inference</li><li>Difference-in-differences</li><li>Panel data</li>
+          </ul>
+          <a class="btn" href="https://github.com/Chin933/temporal-did" target="_blank" rel="noopener">View on GitHub</a>
         </div>
 
+        <!-- ===== Research tool ===== -->
         <div class="card">
-          <h3>Interactive Figure / Dashboard</h3>
-          <p class="meta">Optional</p>
-          <p>Link to an interactive map or chart of your field data (e.g., Observable, Datawrapper, or a hosted notebook).</p>
-          <a class="btn ghost" href="#">View</a>
+          <p class="meta">Research tool &middot; Python &middot; MIT</p>
+          <h3>Citation Auditor</h3>
+          <p>
+            Verifies academic citations: whether a cited work exists, whether its
+            bibliographic details are accurate, and whether the source actually
+            supports the claim made about it. Queries five free databases (Crossref,
+            DataCite, PubMed, arXiv, Open Library) with no API keys, returning
+            field-by-field accuracy reports, open-access links, retraction notices,
+            and structured JSON.
+          </p>
+          <ul class="tag-list" style="margin:12px 0;">
+            <li>Python</li><li>NLP</li><li>Citations</li><li>Verification</li>
+          </ul>
+          <a class="btn" href="https://github.com/Chin933/citation-auditor-skill" target="_blank" rel="noopener">View on GitHub</a>
         </div>
+
       </div>
 
-      <h3 style="margin-top:40px;">A note on large data</h3>
-      <p style="color:var(--muted);font-size:0.92rem;">
-        GitHub Pages works best for files under ~100&nbsp;MB. For bigger datasets,
-        host them on a data repository and link here — I can set that up for you.
+      <p style="margin-top:32px;">
+        <a class="btn ghost" href="https://github.com/Chin933" target="_blank" rel="noopener">See all repositories on GitHub &rarr;</a>
       </p>
     </main>
   </div>
