@@ -191,7 +191,33 @@ section { scroll-margin-top: 76px; }
 .lightbox .caption { position: absolute; bottom: 24px; color: #eee; font-size: 0.95rem; }
 .lightbox .close { position: absolute; top: 16px; right: 24px; color: #fff; font-size: 2rem; cursor: pointer; }
 
-/* ---------- Research (placeholder-free) ---------- */
+/* ---------- Research (papers + figures) ---------- */
+.paper { padding: 6px 0 0; }
+.paper-title {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.paper-meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 14px; }
+.paper-desc { margin: 0 0 6px; max-width: 60em; color: #333; }
+
+.research-figure { margin: 30px 0; }
+.research-figure img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #fff;
+}
+.research-figure figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-top: 8px;
+  max-width: 62em;
+}
+.research-figure figcaption b { color: var(--text); font-weight: 600; }
 .coming { color: var(--muted); font-style: italic; margin: 0; }
 
 /* ---------- Footer ---------- */
