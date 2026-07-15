@@ -215,44 +215,75 @@
         </figure>
       </details>
 
-      <article class="paper research-project">
-        <header class="research-project-head">
-          <h3>Did the Violence Pay? Modeling Over-Violence in the 18th-Century VOC</h3>
-          <span class="paper-tag">Computational model &middot; archival data</span>
-        </header>
+      <details class="paper">
+        <summary class="paper-title">
+          <span class="paper-heading-text">
+            When Monopoly Becomes Self-Defeating
+            <em>Quantifying Over-Violence in the VOC Clove Monopoly</em>
+          </span>
+          <span class="paper-tag">Computational model &middot; click to explore</span>
+        </summary>
 
         <p class="paper-desc">
-          I combine Amsterdam prices, Batavia cargo accounts, and newly reconstructed
-          tree inventories and extirpation records. Cloves sold at roughly 14.9 times
-          their recorded Asian-side unit cost, while two documented campaigns in 1770
-          destroyed 6.9 million young clove trees.
+          The VOC destroyed millions of clove trees to restrict supply. Did this
+          coercion maximize monopoly profits, or destroy more productive capital than
+          commerce required?
         </p>
         <p class="paper-desc">
-          A constrained monopoly model traces commercial returns as biological supply
-          restriction increases. It compares the profit-maximizing restriction level
-          with the historical scale of destruction, setting enforcement cost to zero:
-          if the archival policy still lies beyond the profit peak, positive coercion
-          costs can only strengthen the result.
+          I digitize VOC tree inventories and extirpation records, then combine them
+          with Amsterdam prices and Batavia cargo accounts in a constrained monopoly
+          model linking biological destruction to quantities, prices, and gross
+          returns.
         </p>
         <p class="paper-desc">
-          At the baseline demand elasticity, commercial returns peak at about 30
-          percent of the historical restriction scale. The archival-scale policy is
-          approximately 230 percent above that commercial optimum and retains about
-          38 percent of the benchmark gross return.
+          At the baseline demand elasticity, returns peak at 30 percent of the archival
+          restriction scale. Observed policy exceeds this optimum by 230 percent and
+          retains only 38 percent of peak returns, even when coercion is costless. VOC
+          violence was commercially self-defeating.
         </p>
 
-        <figure class="research-figure">
-          <img src="images/research/fig_voc_overviolence_curve.svg" alt="Commercial return over VOC supply-restriction intensity" loading="lazy">
+        <div class="voc-readouts" aria-live="polite">
+          <div><span>Profit-maximizing destruction</span><strong id="voc-optimal-trees">2.09m</strong></div>
+          <div><span>Historical-scale destruction</span><strong>6.90m</strong></div>
+          <div><span>Excess destruction</span><strong id="voc-excess-trees">4.81m</strong></div>
+          <div><span>Foregone gross return</span><strong id="voc-profit-loss">62%</strong></div>
+        </div>
+
+        <div class="voc-controls" aria-label="Extirpation model parameters">
+          <label for="voc-elasticity">
+            <span>Demand elasticity</span>
+            <input id="voc-elasticity" type="range" min="1.15" max="3" step="0.01" value="1.79">
+            <output id="voc-elasticity-output" for="voc-elasticity">1.79</output>
+          </label>
+          <label for="voc-maturation">
+            <span>Tree maturation time</span>
+            <input id="voc-maturation" type="range" min="5" max="20" step="1" value="10">
+            <output id="voc-maturation-output" for="voc-maturation">10 years</output>
+          </label>
+          <label for="voc-discount">
+            <span>Discount factor</span>
+            <input id="voc-discount" type="range" min="0.90" max="0.99" step="0.01" value="0.96">
+            <output id="voc-discount-output" for="voc-discount">0.96</output>
+          </label>
+        </div>
+
+        <figure class="research-figure voc-figure">
+          <svg id="voc-chart" viewBox="0 0 1200 700" role="img" aria-labelledby="voc-chart-title voc-chart-desc">
+            <title id="voc-chart-title">Commercial return over VOC supply-restriction intensity</title>
+            <desc id="voc-chart-desc">The commercial-return curve peaks before the historical restriction scale.</desc>
+            <image id="voc-chart-fallback" href="images/research/fig_voc_overviolence_curve.svg" width="1200" height="700"/>
+            <g id="voc-chart-root"></g>
+          </svg>
           <figcaption>
             <b>Figure 1. When monopoly restriction becomes commercially self-defeating.</b>
-            The curve combines an isoelastic demand benchmark (&vert;&epsilon;&vert; = 1.79)
-            with the observed 14.9-times clove markup. Restriction initially raises
-            gross commercial return by increasing price, but returns fall after the
-            commercial optimum as destroyed volume dominates. Enforcement cost is set
-            to zero throughout.
+            The curve combines isoelastic demand with the observed 14.9-times clove
+            markup. Tree maturation and discounting change the present value of
+            restricting a future cohort. Restriction initially raises gross return by
+            increasing price, but returns fall after the commercial optimum as
+            destroyed volume dominates. Enforcement cost is zero throughout.
           </figcaption>
         </figure>
-      </article>
+      </details>
     </section>
 
   </div>
@@ -266,5 +297,6 @@
 
   <footer class="footer">&copy; 2026 Qinnan Zhou</footer>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/voc.js"></script>
 </body>
 </html>
