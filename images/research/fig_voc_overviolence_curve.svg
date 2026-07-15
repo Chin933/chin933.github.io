@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Commercial return over VOC supply restriction</title>
+  <desc id="desc">A hump-shaped return curve peaks at thirty percent of historical restriction. Historical restriction lies to the right of the peak and retains thirty-eight percent of benchmark return.</desc>
+  <rect width="1200" height="700" fill="#ffffff"/>
+  <rect x="393" y="80" width="697" height="480" fill="#a34435" opacity="0.055"/>
+
+  <g stroke="#e2e5e8" stroke-width="1">
+    <line x1="110" y1="560" x2="1090" y2="560"/>
+    <line x1="110" y1="449" x2="1090" y2="449"/>
+    <line x1="110" y1="338" x2="1090" y2="338"/>
+    <line x1="110" y1="227" x2="1090" y2="227"/>
+    <line x1="110" y1="116" x2="1090" y2="116"/>
+  </g>
+
+  <g stroke="#30353a" stroke-width="1.5">
+    <line x1="110" y1="80" x2="110" y2="560"/>
+    <line x1="110" y1="560" x2="1090" y2="560"/>
+  </g>
+
+  <g fill="#59616a" font-family="Arial, Helvetica, sans-serif" font-size="17">
+    <text x="90" y="566" text-anchor="end">0</text>
+    <text x="90" y="455" text-anchor="end">25</text>
+    <text x="90" y="344" text-anchor="end">50</text>
+    <text x="90" y="233" text-anchor="end">75</text>
+    <text x="90" y="122" text-anchor="end">100</text>
+    <text x="110" y="590" text-anchor="middle">0%</text>
+    <text x="343" y="590" text-anchor="middle">25%</text>
+    <text x="577" y="590" text-anchor="middle">50%</text>
+    <text x="810" y="590" text-anchor="middle">75%</text>
+    <text x="1043" y="590" text-anchor="middle">100%</text>
+  </g>
+
+  <polyline fill="none" stroke="#244f3b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+    points="110.0,560.0 119.3,520.4 128.7,483.5 138.0,449.2 147.3,417.2 156.7,387.6 166.0,360.2 175.3,334.7 184.7,311.3 194.0,289.6 203.3,269.7 212.7,251.4 222.0,234.6 231.3,219.3 240.7,205.4 250.0,192.8 259.3,181.4 268.7,171.1 278.0,161.9 287.3,153.7 296.7,146.5 306.0,140.2 315.3,134.7 324.7,130.0 334.0,126.0 343.3,122.8 352.7,120.2 362.0,118.2 371.3,116.8 380.7,115.9 390.0,115.6 399.3,115.7 408.7,116.2 418.0,117.2 427.3,118.5 436.7,120.1 446.0,122.1 455.3,124.4 464.7,127.0 474.0,129.9 483.3,132.9 492.7,136.2 502.0,139.7 511.3,143.4 520.7,147.2 530.0,151.2 539.3,155.4 548.7,159.6 558.0,164.0 567.3,168.5 576.7,173.0 586.0,177.7 595.3,182.4 604.7,187.2 614.0,192.0 623.3,196.8 632.7,201.7 642.0,206.7 651.3,211.6 660.7,216.6 670.0,221.5 679.3,226.5 688.7,231.5 698.0,236.4 707.3,241.4 716.7,246.3 726.0,251.2 735.3,256.1 744.7,261.0 754.0,265.8 763.3,270.6 772.7,275.4 782.0,280.1 791.3,284.8 800.7,289.5 810.0,294.1 819.3,298.6 828.7,303.1 838.0,307.6 847.3,312.0 856.7,316.4 866.0,320.7 875.3,325.0 884.7,329.2 894.0,333.3 903.3,337.4 912.7,341.5 922.0,345.5 931.3,349.4 940.7,353.3 950.0,357.1 959.3,360.9 968.7,364.6 978.0,368.3 987.3,371.9 996.7,375.5 1006.0,378.9 1015.3,382.4 1024.7,385.8 1034.0,389.1 1043.3,392.4 1052.7,395.6 1062.0,398.8 1071.3,401.9 1080.7,405.0 1090.0,408.0"/>
+
+  <line x1="393" y1="116" x2="393" y2="560" stroke="#c5933d" stroke-width="2" stroke-dasharray="6 6"/>
+  <circle cx="393" cy="116" r="9" fill="#c5933d" stroke="#ffffff" stroke-width="4"/>
+  <text x="393" y="91" text-anchor="middle" fill="#7e5c23" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">COMMERCIAL OPTIMUM: 30%</text>
+
+  <line x1="1043" y1="361" x2="1043" y2="560" stroke="#a34435" stroke-width="2" stroke-dasharray="6 6"/>
+  <circle cx="1043" cy="361" r="10" fill="#a34435" stroke="#ffffff" stroke-width="4"/>
+  <text x="1025" y="333" text-anchor="end" fill="#84372d" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">HISTORICAL SCALE: 38% OF PEAK RETURN</text>
+
+  <text x="742" y="105" text-anchor="middle" fill="#9d5a50" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="1.5">SELF-DEFEATING RESTRICTION</text>
+  <text x="600" y="649" text-anchor="middle" fill="#30353a" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">SUPPLY-RESTRICTION INTENSITY</text>
+  <text x="31" y="320" text-anchor="middle" fill="#30353a" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" transform="rotate(-90 31 320)">GROSS COMMERCIAL RETURN (PEAK = 100)</text>
+</svg>

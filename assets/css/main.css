@@ -216,6 +216,18 @@ section { scroll-margin-top: 76px; }
 .paper[open] > summary::before { transform: rotate(90deg); }
 .paper-tag { font-family: var(--sans); font-weight: 400; font-size: 0.85rem; color: var(--muted); }
 .paper-desc { margin: 14px 0 6px; max-width: 60em; color: #333; }
+.research-project-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+}
+.research-project-head h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
 
 .research-figure { margin: 30px 0; }
 .research-figure img {
