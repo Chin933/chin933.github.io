@@ -90,14 +90,14 @@
 
         <div class="repo">
           <div class="repo-head">
-            <a class="repo-name" href="https://github.com/Chin933/Chinese_Cultural_Variables" target="_blank" rel="noopener">Chinese Cultural Variables</a>
-            <span class="repo-tags">Dataset · China · historical political economy</span>
+            <a class="repo-name" href="https://github.com/Chin933/VOC-Spice-Database" target="_blank" rel="noopener">VOC Spice Database</a>
+            <span class="repo-tags">Dataset · archives · historical political economy</span>
           </div>
           <p class="repo-desc">
-            County- and prefecture-level datasets on Chinese historical institutions,
-            including imperial examination degrees, clans, and Protestant missions.
+            Source-linked data on more than 10,000 VOC clove-tree counts, spice flows,
+            and coercive supply restriction from 1686 to 1788.
           </p>
-          <a class="repo-link" href="https://github.com/Chin933/Chinese_Cultural_Variables" target="_blank" rel="noopener">GitHub &rarr;</a>
+          <a class="repo-link" href="https://github.com/Chin933/VOC-Spice-Database" target="_blank" rel="noopener">GitHub &rarr;</a>
         </div>
 
       </div>
@@ -247,17 +247,22 @@
           violence was commercially self-defeating.
         </p>
 
+        <figure class="research-figure">
+          <img src="images/research/voc_local_tree_counts.png" alt="Distribution of 8,816 verified local VOC clove-tree counts by inventory year and tree stage" loading="lazy">
+        </figure>
+
         <div class="voc-readouts" aria-live="polite">
-          <div><span>Profit-maximizing destruction</span><strong id="voc-optimal-trees">2.09m</strong></div>
+          <div><span>Profit-maximizing destruction</span><strong id="voc-optimal-trees">2.08m</strong></div>
           <div><span>Historical-scale destruction</span><strong>6.90m</strong></div>
-          <div><span>Excess destruction</span><strong id="voc-excess-trees">4.81m</strong></div>
-          <div><span>Foregone gross return</span><strong id="voc-profit-loss">62%</strong></div>
+          <div><span>Excess destruction</span><strong id="voc-excess-trees">4.82m</strong></div>
+          <div><span>Discounted gross-return loss</span><strong id="voc-discounted-loss">114.7m gld</strong></div>
+          <div><span>Implied value of coercion</span><strong id="voc-coercion-value">26.3 gld/tree</strong></div>
         </div>
 
         <div class="voc-controls" aria-label="Extirpation model parameters">
           <label for="voc-elasticity">
             <span>Demand elasticity</span>
-            <input id="voc-elasticity" type="range" min="1.15" max="3" step="0.01" value="1.79">
+            <input id="voc-elasticity" type="range" min="1.15" max="3" step="0.01" value="1.7948298496370465">
             <output id="voc-elasticity-output" for="voc-elasticity">1.79</output>
           </label>
           <label for="voc-maturation">
@@ -280,12 +285,12 @@
             <g id="voc-chart-root"></g>
           </svg>
           <figcaption>
-            <b>Figure 1. When monopoly restriction becomes commercially self-defeating.</b>
+            <b>Interactive model. When monopoly restriction becomes commercially self-defeating.</b>
             The curve combines isoelastic demand with the observed 14.9-times clove
-            markup. Tree maturation and discounting change the present value of
-            restricting a future cohort. Restriction initially raises gross return by
-            increasing price, but returns fall after the commercial optimum as
-            destroyed volume dominates. Enforcement cost is zero throughout.
+            markup. Restriction initially raises gross return by increasing price, but
+            returns fall after the commercial optimum as destroyed volume dominates.
+            Tree maturation and discounting scale the loss and implied coercion value;
+            they do not move the profit peak. Enforcement cost is zero throughout.
           </figcaption>
         </figure>
       </details>
