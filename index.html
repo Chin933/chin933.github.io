@@ -231,20 +231,21 @@
 
         <p class="paper-desc">
           The VOC destroyed millions of clove trees to restrict supply. Did this
-          coercion maximize monopoly profits, or destroy more productive capital than
-          commerce required?
+          policy maximize monopoly profits, or eliminate more productive biological
+          capital than commerce required?
         </p>
         <p class="paper-desc">
           I digitize VOC tree inventories and extirpation records, then combine them
-          with Amsterdam prices and Batavia cargo accounts in a constrained monopoly
-          model linking biological destruction to quantities, prices, and gross
-          returns.
+          with Amsterdam prices and Batavia cargo accounts. I extend the
+          Gordon&ndash;Schaefer bioeconomic model by allowing a monopolist to destroy
+          productive stock in order to restrict future supply.
         </p>
         <p class="paper-desc">
-          At the baseline demand elasticity, returns peak at 30 percent of the archival
-          restriction scale. Observed policy exceeds this optimum by 230 percent and
-          retains only 38 percent of peak returns, even when coercion is costless. VOC
-          violence was commercially self-defeating.
+          At the baseline calibration, discounted profit peaks at 61 percent of the
+          archival extirpation scale. Historical policy destroyed 2.66 million trees
+          beyond the commercial optimum and sacrificed 33.8 million guilders. Making
+          that choice rational requires at least 12.7 guilders per excess tree in
+          non-commercial value from coercion.
         </p>
 
         <figure class="research-figure">
@@ -252,18 +253,18 @@
         </figure>
 
         <div class="voc-readouts" aria-live="polite">
-          <div><span>Profit-maximizing destruction</span><strong id="voc-optimal-trees">2.08m</strong></div>
+          <div><span>Profit-maximizing destruction</span><strong id="voc-optimal-trees">4.24m</strong></div>
           <div><span>Historical-scale destruction</span><strong>6.90m</strong></div>
-          <div><span>Excess destruction</span><strong id="voc-excess-trees">4.82m</strong></div>
-          <div><span>Discounted gross-return loss</span><strong id="voc-discounted-loss">114.7m gld</strong></div>
-          <div><span>Implied value of coercion</span><strong id="voc-coercion-value">26.3 gld/tree</strong></div>
+          <div><span>Excess destruction</span><strong id="voc-excess-trees">2.66m</strong></div>
+          <div><span>Discounted profit loss</span><strong id="voc-discounted-loss">33.8m gld</strong></div>
+          <div><span>Implied value of coercion</span><strong id="voc-coercion-value">12.7 gld/tree</strong></div>
         </div>
 
         <div class="voc-controls" aria-label="Extirpation model parameters">
           <label for="voc-elasticity">
             <span>Demand elasticity</span>
-            <input id="voc-elasticity" type="range" min="1.15" max="3" step="0.01" value="1.7948298496370465">
-            <output id="voc-elasticity-output" for="voc-elasticity">1.79</output>
+            <input id="voc-elasticity" type="range" min="1.15" max="3" step="any" value="1.7948298496370465">
+            <output id="voc-elasticity-output" for="voc-elasticity">1.795</output>
           </label>
           <label for="voc-maturation">
             <span>Tree maturation time</span>
@@ -279,19 +280,10 @@
 
         <figure class="research-figure voc-figure">
           <svg id="voc-chart" viewBox="0 0 1200 700" role="img" aria-labelledby="voc-chart-title voc-chart-desc">
-            <title id="voc-chart-title">Commercial return over VOC supply-restriction intensity</title>
-            <desc id="voc-chart-desc">The commercial-return curve peaks before the historical restriction scale.</desc>
-            <image id="voc-chart-fallback" href="images/research/fig_voc_overviolence_curve.svg" width="1200" height="700"/>
+            <title id="voc-chart-title">Discounted VOC profit over extirpation intensity</title>
+            <desc id="voc-chart-desc">The Gordon-Schaefer simulation peaks before the historical extirpation scale.</desc>
             <g id="voc-chart-root"></g>
           </svg>
-          <figcaption>
-            <b>Interactive model. When monopoly restriction becomes commercially self-defeating.</b>
-            The curve combines isoelastic demand with the observed 14.9-times clove
-            markup. Restriction initially raises gross return by increasing price, but
-            returns fall after the commercial optimum as destroyed volume dominates.
-            Tree maturation and discounting scale the loss and implied coercion value;
-            they do not move the profit peak. Enforcement cost is zero throughout.
-          </figcaption>
         </figure>
       </details>
     </section>
