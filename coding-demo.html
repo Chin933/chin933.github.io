@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Court Text Coding Demo · Qinnan Zhou</title>
+  <meta name="description" content="Interactive MacBERT coding pipeline for Chinese judicial decisions.">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/coding-demo.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Qinnan Zhou</a>
+      <a class="demo-back" href="index.html#software">&larr; Data &amp; Research Software</a>
+    </div>
+  </nav>
+
+  <main class="page demo-page">
+    <header class="demo-hero">
+      <p class="eyebrow">Research measurement pipeline</p>
+      <h1>Chinese Court Text Coding</h1>
+      <p>
+        Run a judicial decision through four MacBERT classifiers and the full
+        case-level measurement stack.
+      </p>
+    </header>
+
+    <section class="scale-grid" aria-label="Project scale">
+      <div><strong>106.7M</strong><span>judicial records</span></div>
+      <div><strong>3.50M</strong><span>probability sample</span></div>
+      <div><strong>4</strong><span>MacBERT classifiers</span></div>
+      <div><strong>10</strong><span>coding tasks</span></div>
+      <div><strong>28,679</strong><span>labeled candidates</span></div>
+    </section>
+
+    <section class="demo-section">
+      <div class="section-heading">
+        <div>
+          <h2>Document</h2>
+          <p>Paste a Chinese judicial decision or load the example.</p>
+        </div>
+        <button id="load-example" class="button button-secondary" type="button">Load example</button>
+      </div>
+      <label class="sr-only" for="court-text">Chinese judicial decision text</label>
+      <textarea id="court-text" rows="15" placeholder="在此粘贴裁判文书文本……"></textarea>
+      <div class="run-row">
+        <button id="run-pipeline" class="button button-primary" type="button">Run coding pipeline</button>
+        <span id="run-status" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <section id="results" class="results" hidden>
+      <section class="demo-section">
+        <div class="section-heading compact">
+          <div>
+            <h2>Annotated Text</h2>
+            <p>Model candidates are labeled with posterior confidence.</p>
+          </div>
+        </div>
+        <div class="legend">
+          <span class="claim-key">Claim</span>
+          <span class="evidence-key">Evidence</span>
+          <span class="objection-key">Objection</span>
+          <span class="event-key">Fact event</span>
+          <span class="amount-key">Amount</span>
+        </div>
+        <div id="annotated-text" class="annotated-text"></div>
+      </section>
+
+      <section class="demo-section">
+        <div class="section-heading compact">
+          <div>
+            <h2>Case Measures</h2>
+            <p id="runtime"></p>
+          </div>
+        </div>
+        <div id="case-measures" class="measure-grid"></div>
+      </section>
+
+      <section class="demo-section">
+        <details class="json-panel">
+          <summary>Structured JSON</summary>
+          <button id="copy-json" class="copy-button" type="button">Copy JSON</button>
+          <pre id="structured-json"></pre>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">Qinnan Zhou</footer>
+  <script src="assets/js/coding-demo.js"></script>
+</body>
+</html>
