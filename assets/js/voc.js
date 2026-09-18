@@ -53,9 +53,11 @@
 
     var optimum = 0;
     var peakProfit = 0;
+    var policyGrid = [];
     for (var candidate = 0; candidate <= 2000; candidate += 1) {
       var candidateIntensity = plot.xmax * candidate / 2000;
       var candidateProfit = discountedProfit(candidateIntensity);
+      policyGrid.push({ x: candidateIntensity, profit: candidateProfit });
       if (candidateProfit > peakProfit) {
         peakProfit = candidateProfit;
         optimum = candidateIntensity;
@@ -71,8 +73,21 @@
     var historicalProfit = discountedProfit(1);
     var historicalValue = historicalProfit / peakProfit;
     var discountedLoss = Math.max(0, peakProfit - historicalProfit);
-    var excessTrees = Math.max(0, historicalTrees * (1 - optimum));
-    var coercionValue = excessTrees ? discountedLoss / excessTrees : 0;
+    var coercionValue = 0;
+    policyGrid.forEach(function (policy) {
+      if (policy.x < 1) {
+        coercionValue = Math.max(
+          coercionValue,
+          (policy.profit - historicalProfit) / (historicalTrees * (1 - policy.x))
+        );
+      }
+    });
+    var boundary = 1 - 1e-7;
+    coercionValue = Math.max(
+      coercionValue,
+      (discountedProfit(boundary) - historicalProfit) /
+        (historicalTrees * (1 - boundary))
+    );
     return {
       points: points,
       optimum: optimum,
