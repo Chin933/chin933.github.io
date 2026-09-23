@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historical CJK Layout Demo · Qinnan Zhou</title>
+  <meta name="description" content="Interactive layout analysis for historical Chinese archival pages.">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/coding-demo.css">
+  <link rel="stylesheet" href="assets/css/layout-demo.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Qinnan Zhou</a>
+      <a class="demo-back" href="index.html#software">&larr; Data &amp; Research Software</a>
+    </div>
+  </nav>
+
+  <main class="page demo-page layout-page">
+    <header class="demo-hero layout-hero">
+      <p class="eyebrow">Historical document geometry</p>
+      <h1>Chinese Archive Layout</h1>
+      <p>
+        Detect text-bearing regions in ruled historical pages. Choose a page type,
+        upload an image, and inspect the model geometry directly on the scan.
+      </p>
+    </header>
+
+    <section class="scale-grid layout-scale" aria-label="Pipeline features">
+      <div><strong>5</strong><span>page types</span></div>
+      <div><strong>2</strong><span>layout roles</span></div>
+      <div><strong>Polygon</strong><span>slanted geometry</span></div>
+      <div><strong>CPU</strong><span>live inference</span></div>
+      <div><strong>10 MB</strong><span>upload limit</span></div>
+    </section>
+
+    <section class="demo-section input-section">
+      <div class="section-heading">
+        <div>
+          <h2>Page image</h2>
+          <p>Load a precomputed archive example or analyze your own scan.</p>
+        </div>
+        <button id="random-example" class="button button-secondary" type="button">Random example</button>
+      </div>
+
+      <div id="drop-zone" class="drop-zone">
+        <input id="page-file" type="file" accept="image/jpeg,image/png,image/webp">
+        <div class="drop-copy">
+          <strong>Drop an image here</strong>
+          <span>or choose a JPEG, PNG, or WebP file</span>
+        </div>
+        <span id="file-name" class="file-name">No file selected</span>
+      </div>
+
+      <div class="control-row">
+        <label for="page-kind">
+          <span>Page type</span>
+          <select id="page-kind">
+            <option value="personal_biography">Personal biography</option>
+            <option value="associate_biography">Associate biography</option>
+            <option value="exam">Exam register</option>
+            <option value="essay">Essay</option>
+            <option value="poem">Poem</option>
+          </select>
+        </label>
+        <button id="analyze-page" class="button button-primary" type="button" disabled>Analyze layout</button>
+        <span id="layout-status" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <section id="layout-results" class="results" hidden>
+      <section class="demo-section">
+        <div class="section-heading compact">
+          <div>
+            <h2>Detected Layout</h2>
+            <p id="result-caption">Model geometry over the source image.</p>
+          </div>
+          <div class="layout-legend" aria-label="Element roles">
+            <span><i class="primary-swatch"></i>Primary</span>
+            <span><i class="annotation-swatch"></i>Annotation</span>
+          </div>
+        </div>
+
+        <div class="viewer-grid">
+          <div class="image-stage">
+            <img id="result-image" alt="Historical Chinese archival page">
+            <svg id="layout-overlay" aria-label="Detected layout overlay"></svg>
+          </div>
+          <aside class="result-sidebar">
+            <div id="layout-summary" class="layout-summary"></div>
+            <div class="element-heading">
+              <h3>Elements</h3>
+              <span id="element-count"></span>
+            </div>
+            <div id="element-list" class="element-list"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="demo-section">
+        <details class="json-panel">
+          <summary>Structured JSON</summary>
+          <button id="copy-layout-json" class="copy-button" type="button">Copy JSON</button>
+          <pre id="layout-json"></pre>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">Qinnan Zhou</footer>
+  <script src="assets/js/layout-demo.js"></script>
+</body>
+</html>
