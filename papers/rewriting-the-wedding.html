@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rewriting the Wedding — Qinnan Zhou</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <section class="hero">
+      <h1>Rewriting the Wedding</h1>
+      <p class="affil">Measurement and Reporting of Bride Kidnapping in the <i>Life in Kyrgyzstan</i> Panel</p>
+      <p class="agenda">
+        Qinnan Zhou<br>
+        Duke Journal of Economics, Vol.&nbsp;XXXVIII, Summer&nbsp;2026
+      </p>
+    </section>
+
+    <section class="section">
+      <p class="paper-desc" id="status">The online version will be linked here soon.</p>
+      <p class="paper-desc"><a href="../index.html#research">&larr; Back to homepage</a></p>
+    </section>
+
+  </div>
+
+  <footer class="footer">&copy; 2026 Qinnan Zhou</footer>
+
+  <script>
+    // Paste the journal URL between the quotes below (must start with https://).
+    // While it is empty, this page shows the "linked here soon" message.
+    var PAPER_URL = "";
+
+    (function () {
+      if (!/^https:\/\//.test(PAPER_URL)) { return; }
+      var status = document.getElementById("status");
+      var link = document.createElement("a");
+      link.href = PAPER_URL;
+      link.textContent = "Read the published version";
+      status.textContent = "Redirecting to the published version. If nothing happens, ";
+      status.appendChild(link);
+      status.appendChild(document.createTextNode("."));
+      window.location.replace(PAPER_URL);
+    })();
+  </script>
+</body>
+</html>
